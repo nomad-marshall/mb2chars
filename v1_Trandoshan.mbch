@@ -1,0 +1,218 @@
+//Legends Mode character file - Created by MARSHALL AND NOBODY ELSE unless..?
+
+ClassInfo
+{
+	name				"v1_Trandoshan"
+	weapons				WP_MELEE
+	attributes			MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_POISON_DART,3|MB_ATT_TRACKING_DART,3|MB_ATT_TRACKING_BEACON|MB_ATT_DEXTERITY,1|MB_ATT_BUNNY_HOP,1|MB_ATT_ARC_RIFLE_SCOPE|MB_ATT_HEALING,3
+	maxhealth			250
+	maxarmor			25
+
+	resource 			RESOURCE_RAGE 
+	forcepool			250
+	resourceRegenCap 	75
+    resourceRegenAmount 1.8
+    resourceRegenRate 	750
+
+	forcepowers			FP_SEE,1|FP_LEVITATION,2
+	model				"trandoshan"
+	skin				"rgb"
+	uishader			"models/players/trandoshan/mb2_icon_rgb"
+	userRGB 			1
+	MBClass			    MB_CLASS_WOOKIE
+	classNumberLimit	5
+	Classflags			CFL_BLOODYMELEE|CFL_ACIDBLOOD|CFL_HEAVYMELEE|CFL_STRONGAGAINSTPHYSICAL
+	modelscale          1.2
+	WP_BowcasterFlags	HELD_POISON|HELD_ALTRELOAD
+	WP_T21Flags			HELD_POISON|HELD_ALTRELOAD|HELD_KNOCKBACK|HELD_PULSE
+	WP_M5Flags			HELD_POISON|HELD_ALTRELOAD
+	WP_RepeaterFlags	HELD_POISON|HELD_ALTRELOAD
+	speed           	1.2
+	saberStanceAnim		MELEE_STAND
+	flourishAnim 		BOTH_SPINATTACK6
+	gloatAnim 			BOTH_WOOKIEE_ENRAGE
+	tauntAnim 			BOTH_ENGAGETAUNT
+	
+	meleeMoves M_UPPERCUT|M_BLOCK|M_FBKICK|M_JUMPKICK|M_KATA|M_KICK|M_LEGSWEEP|M_PUNCH|M_RLKICK
+
+	respawnCustomTime 50000
+	
+	SPECIAL1	EAS_FP_SEE
+	SPECIAL2	EAS_HI_POISON
+	SPECIAL3 	EAS_HI_TRACKER
+	
+	uioverlay "gfx/icons/heavy"
+
+	isCustomBuild		1
+	mbPoints			5
+	
+	c_att_skill_0	MB_ATT_INVALID
+	c_att_names_0	"^2Weaponry"
+	c_att_ranks_0	-1
+	
+	c_att_skill_1	MB_ATT_T21
+	c_att_names_1	"Hunting Shotgun (T21):"
+	c_att_ranks_1 	2
+	
+	c_att_skill_2	MB_ATT_AMBAN
+	c_att_names_2	"Wookie Prod (Amban stun):"
+	c_att_ranks_2	1,0,0
+	
+	c_att_skill_3	MB_ATT_SONIC_GRENADES
+	c_att_names_3	"Sonic Grenades:"
+	c_att_ranks_3	0,1
+	
+	c_att_skill_4	MB_ATT_WESTARM5
+	c_att_names_4	"Precision Blaster (Westar M5):"
+	c_att_ranks_4	3,0
+	
+	c_att_skill_5	MB_ATT_BOWCASTER
+	c_att_names_5	"Relby Rifle (Bowcaster):"
+	c_att_ranks_5	1,1,1
+
+	c_att_skill_6	MB_ATT_REPEATER
+	c_att_names_6	"Jungle Repeater:"
+	c_att_ranks_6	2,0
+	
+	c_att_skill_7	MB_ATT_RESPAWNS
+	c_att_names_7	"Reinforcements:"
+	c_att_ranks_7	2
+}
+
+WeaponInfo0
+{
+	WeaponToReplace		WP_BOWCASTER
+	WeaponBasedOff		WP_BOWCASTER
+	NewWorldModel		"models/weapons2/relby_v10/model_w.glm"
+	NewViewModel		"models/weapons2/relby_v10/model.md3"
+	Icon				"gfx/hud/w_icon_relby_v10"
+	WeaponName			"Relby-v10 Targeting Rifle"
+	FlashSound0 		"sound/weapons/cw-w5/fire_scope.mp3"
+	AltFlashSound0 		"sound/weapons/cw-w5/fire_scope.mp3"
+	primGore		1
+	altGore			1
+	CustomAmmo           800
+	idleAnim  DC15_FIRE
+}
+
+WeaponInfo1
+{
+	WeaponToReplace 	WP_AMBAN
+	WeaponBasedOff  	WP_AMBAN
+	NewWorldModel 		"models/weapons2/arc_caster/arc_caster_w.glm"
+	NewViewModel  		"models/weapons2/dummy/dummy.md3"
+	Icon  				"gfx/hud/w_icon_arc_caster"
+	WeaponName  		"Wookie Prod"
+	primFireEnabled 	1
+	altfireenabled		0
+	clipsize			0
+	primGore			1
+	altGore				1
+	CustomAmmo          0
+}
+
+WeaponInfo2
+{
+	WeaponToReplace		WP_REPEATER
+	WeaponBasedOff		WP_CLONE_RIFLE
+	NewWorldModel		"models/weapons2/lc/c_rifle_w.glm"
+	NewViewModel		"models/weapons2/lc/c_rifle_w.md3"
+	Icon				"gfx/hud/w_icon_smart"
+	WeaponName			"Jungle Repeater"
+	primGore			1
+	altGore				1
+	CustomAmmo          800
+	idleAnim  DC15_FIRE
+	velocityMod			2
+	rateMod				1.2
+	damageMod			1.2
+}
+WeaponInfo3
+{
+	WeaponToReplace		WP_M5
+	WeaponBasedOff		WP_BLASTER
+	NewWorldModel		"models/weapons2/sherruck_blaster/sher_rifle_w.glm"
+	NewViewModel		"models/weapons2/sherruck_blaster/sher_rifle.md3"
+	Icon				"gfx/hud/w_icon_sherruck"
+	WeaponName			"Precision Blaster"
+	primGore			1
+	altGore				1
+	CustomAmmo          800
+	damageMod			1.5
+	rateMod				2.5
+	velocityMod			1.8
+	clipsize			60
+}
+
+WeaponInfo4
+{
+	WeaponToReplace		WP_T21
+	WeaponBasedOff		WP_SHOTGUN
+	NewWorldModel		"models/weapons2/lj-50_concussion/lj-50_concussion_w.glm"
+	NewViewModel		"models/weapons2/lj-50_concussion/lj-50_concussion.md3"
+	Icon				"gfx/hud/w_icon_lj-50_concussion"
+	WeaponName			"Hunting Shotgun"
+	primGore			1
+	altGore				1
+	CustomAmmo          800
+	clipsize			24
+	damageMod			1.4
+	velocityMod			1.3
+	rateMod				1.5
+	FPMult				1.4
+}
+
+ForceInfo0
+{
+	ForceToReplace	FP_SEE
+	Icon		"gfx/marvel/spidersense"
+	ForcePowerName	"Hunter Vision"
+}
+
+description	"Trandoshan Hunter
+
+Class: Wookie
+Brief Overview: 
+A nimble hunter with a poisonous arsenal of weapons, strong melee attacks, and tracking tools.
+
+^2Weaponry:
+- Heavy Melee
+- Wookie Prod
+-- Based on Amban Rifle 
+-- No Primary fire 
+
+- Relby-v10 Targeting Rifle
+-- Based on Bowcaster (3)
+-- Poisons targets
+-- Fixed-length reload
+
+- Precision Blaster 
+-- Based on Westar M5 
+-- Does 50% more Damage, 250% slower ROF 
+-- 80% faster projectiles 
+-- Poisons targets
+-- Fixed-length reload
+
+- Hunting Shotgun
+-- Based on T21 
+-- Primary fire only
+-- Does 40% more damage to HP & FP
+-- 30% faster projectiles, 50% slower ROF
+-- Poisons, stuns, electrifies and knocks back targets
+-- Fixed-length reload
+
+^8Attributes:
+- Jump (2)
+- Dexterity (1)
+- Strength (1)
+- Heavy Melee 
+- Bunny Hop (1)
+- 50% Melee damage resist.
+- Healing (3)
+- Acid Blood (On death, poison nearby enemies)
+- Tracking Beacon (See Tracked players)
+
+^3Abilities:
+- Hunter Vision (Force Sense 1) ^3[CS1]
+- Poison Dart ^3[CS2]
+- Tracking Dart ^3[CS3]"

@@ -1,0 +1,268 @@
+//Legends Mode character file - Created by Frenzy & Leos
+ClassInfo
+{
+	name			"h10_JForce"
+	MBClass			MB_CLASS_JEDI
+	weapons			WP_MELEE|WP_SABER|
+	forcepowers		FP_LEVITATION,3|FP_SEE,3|FP_TELEPATHY,2
+	attributes		MB_ATT_FORCEBLOCK,3|MB_ATT_FORCEFOCUS,3|MB_ATT_FP_REPULSE,1|MB_ATT_FLIPKICK,1|MB_ATT_SPY_DISGUISE,2|MB_ATT_FP_SABER_DEFENSE,0|MB_ATT_DASH_JUMP|MB_ATT_DASH,1||MB_ATT_DEXTERITY,3|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_THROWER_ICE
+	forcepool           120
+    forceregen          1.1
+    resource           	resource_battery
+    resourceRegenAmount	3
+    resourceRegenRate   700
+    maxhealth           140
+	rankforcepool		140,150,160
+	forceregen			1.1
+	maxhealth			140
+	Speed 				1
+	modelscale			1
+	classNumberLimit	2
+	classflags			CFL_ICETHROWER|CFL_SEEING_STEALTH|CFL_HEAVYMELEE|CFL_NOPICKUPS|CFL_AKIMBOPISTOL3
+	forceBlocking   	1
+	WP_MandoPistolFlags HELD_PULSE
+	WP_SaberFlags		HELD_STUN
+	rateOfFire_Melee	.5	
+	rankAP				1.5,2.0,2.5
+	rankAS				1.1,1.3
+	saberDamage			20
+	saberMaxChain 		4
+	saber1				martialarts_legends
+	saber2				martialarts_legends
+	saberstyle			SS_DUAL
+	APmultiplier       	0.8
+	BPmultiplier		1
+	saberStanceAnim		MELEE_STAND
+	gloatAnim 			BOTH_ATTACK10
+	flourishAnim 		BOTH_STAND5TOSIT3
+	uioverlay_c 		"gfx/icons/brawler"
+	uioverlay_l 		"gfx/icons/support"
+	uioverlay_r 		"gfx/icons/infantry"
+	model				"ongree" 				
+	skin				"rgb"					
+	uishader			"gfx/hud/fa_icons/MB2_Icon_ongreejedi"
+	model_1				"jedipack_hb" 	
+	skin_1				"jedi2_rgb"	
+	uishader_1			"models/players/jedipack_hb/mb2_icon_jedi2"
+	
+	special1			EAS_FP_SENSE
+	special2	 		EAS_HI_DASH
+	special3			EAS_HI_DEX
+	special4			EAS_FP_REPULSE
+	
+	isCustomBuild		1
+	mbPoints			15
+	hasCustomSpec 		3
+	isOnlyOneSpec		1
+	customSpecName_1 	"BRAWLER"
+	customSpecIcon_1 	"gfx/2d/hud/hlp_destroy"
+	customSpecDesc_1 	"CQC Brawler"
+	customSpecName_2 	"AREA DENIAL"
+	customSpecIcon_2 	"gfx/2d/hud/tindicator"
+	customSpecDesc_2 	"AOE lockdown"
+	customSpecName_3 	"SUPPORT"
+	customSpecIcon_3 	"gfx/2d/hud/hlp_escort"
+	customSpecDesc_3 	"Team Support"
+
+	//brawler build
+	c_att_skill_0		MB_ATT_RESPAWNS
+	c_att_names_0		"Reinforcement:"
+	c_att_ranks_0		4
+	c_att_skill_1		MB_ATT_FP_BLIND
+	c_att_names_1		"Force Blind:"
+	c_att_ranks_1		0,0,0
+	c_att_skill_2		MB_ATT_FP_SPEED
+	c_att_names_2		"Force Speed:"
+	c_att_ranks_2 		0,1,1
+	c_att_skill_3		MB_ATT_FP_PROTECT
+	c_att_names_3		"Force Protect:"
+	c_att_ranks_3		2,2
+	c_att_skill_4		MB_ATT_CORTOSIS
+	c_att_names_4		"Cortosis:"
+	c_att_ranks_4 		2
+	c_att_skill_5		MB_ATT_FP_PUSH
+	c_att_names_5		"Force Push:"
+	c_att_ranks_5 		0
+	c_att_skill_6		MB_ATT_FP_PULL
+	c_att_names_6		"Force Pull:"
+	c_att_ranks_6 		0,1,1
+	c_att_skill_7		MB_ATT_FP_DRAIN
+	c_att_names_7		"Force Drain:"
+	c_att_ranks_7 		4,0
+	c_att_skill_8		MB_ATT_FLIPKICK
+	c_att_names_8		"Flipkick"
+	c_att_ranks_8		0,4
+	c_att_skill_9		MB_ATT_FP_ABSORB
+	c_att_names_9		"Absorb"
+	c_att_ranks_9		"1,2"
+	c_att_skill_10		MB_ATT_AP_MULTIPLIER
+	c_att_names_10		"Saber Attack Power (1.5,2,2.5):"
+	c_att_ranks_10		1,1,2
+	c_att_skill_11		MB_ATT_AS_MULTIPLIER
+	c_att_names_11		"Saber Attack Speed (1.1,1.3):"
+	c_att_ranks_11		1,2
+
+
+	//aoe build
+	c_att_skill_15		MB_ATT_RESPAWNS
+	c_att_names_15		"Respawns:"
+	c_att_ranks_15		2
+	c_att_skill_16		MB_ATT_FP_PUSH
+	c_att_names_16		"Force Push:"
+	c_att_ranks_16		0,0,1
+	c_att_skill_17		MB_ATT_FP_PULL
+	c_att_names_17		"Force Pull:"
+	c_att_ranks_17		0,0,1
+	c_att_skill_18		MB_ATT_FP_LIGHTNING
+	c_att_names_18		"Force Lightning:"
+	c_att_ranks_18		0,0,1
+	c_att_skill_19		MB_ATT_FP_DRAIN
+	c_att_names_19		"Force Drain:"
+	c_att_ranks_19		1,1,1
+	c_att_skill_20		MB_ATT_FP_ABSORB
+	c_att_names_20		"Absorb:"
+	c_att_ranks_20		1,1,1
+	c_att_skill_21		MB_ATT_FP_PROTECT
+	c_att_names_21		"Force Protect:"
+	c_att_ranks_21		1,1,1
+	c_att_skill_22		MB_ATT_FP_SPEED
+	c_att_names_22		"Force Speed:"
+	c_att_ranks_22		0,1,1
+	c_att_skill_23		MB_ATT_POWER
+	c_att_names_23		"Force Pool:"
+	c_att_ranks_23		1,1,1
+	c_att_skill_24		MB_ATT_BESKAR
+	c_att_names_24		"Reinforced Robes (Beskar):"
+	c_att_ranks_24		1,1,1
+	c_att_skill_25		MB_ATT_MANDO_PISTOL
+	c_att_names_25		"Lightning Bolts:"
+	c_att_ranks_25		0,0,0
+	c_att_skill_26		MB_ATT_ROCKET_LAUNCHER
+	c_att_names_26		"Force Blast:"
+	c_att_ranks_26		0,0,0	
+
+	//support build
+	c_att_skill_30		MB_ATT_RESPAWNS
+	c_att_names_30 		"Reinforcement:"
+	c_att_ranks_30 		5
+	c_att_skill_31		MB_ATT_FP_PUSH
+	c_att_names_31		"Push:"
+	c_att_ranks_31		0,0,0
+	c_att_skill_32		MB_ATT_FP_PULL
+	c_att_names_32		"Pull:"
+	c_att_ranks_32		0,0,0
+	c_att_skill_33		MB_ATT_FP_SPEED
+	c_att_names_33		"Force Speed:"
+	c_att_ranks_33		0,0,0
+	c_att_skill_34		MB_ATT_FP_ABSORB
+	c_att_names_34		"Absorb:"
+	c_att_ranks_34		0,0,0
+	c_att_skill_35		MB_ATT_FP_PROTECT
+	c_att_names_35		"Force Protect:"
+	c_att_ranks_35		0,0,0
+	c_att_skill_36		MB_ATT_LIGHTS_BEACON
+	c_att_names_36		"Light's Beacon:"
+	c_att_ranks_36		0
+	c_att_skill_37		MB_ATT_THROWER
+	c_att_names_37		"Force Freeze:"
+	c_att_ranks_37		0,0,0
+	c_att_skill_38		MB_ATT_ROCKET_LAUNCHER
+	c_att_names_38		"Force Blast:"
+	c_att_ranks_38		0,0,0	
+	c_att_skill_39		MB_ATT_FLIPKICK
+	c_att_names_39		"Flipkick:"
+	c_att_ranks_39		0,3
+	c_att_skill_40		MB_ATT_DISP_HEALTH
+	c_att_names_40		"Health Dispenser:"
+	c_att_ranks_40		0
+	c_att_skill_41		MB_ATT_DISP_FORCE
+	c_att_names_41		"Force Dispenser:"
+	c_att_ranks_41		0,0,0
+	c_att_skill_42		MB_ATT_DISP_BLOCK
+	c_att_names_42		"BP Dispenser:"
+	c_att_ranks_42		0,0,0
+	c_att_skill_43		MB_ATT_GUN_DEFENSE
+	c_att_names_43		"Blaster Defense:"
+	c_att_ranks_43		0,0,0
+    c_att_skill_44   	MB_ATT_FP_SABER_DEFENSE
+    c_att_names_44   	"Saber Defense:"
+    c_att_ranks_44    	0,0,0
+}
+WeaponInfo0
+{
+	WeaponToReplace		WP_SABER
+	WeaponBasedOff		WP_SABER
+	NewWorldModel		"models/weapons2/noweap/noweap.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	Icon				"models/weapons2/halo_melee/icon.png"
+	WeaponName			"Martial Arts"
+}
+WeaponInfo1
+{
+	WeaponToReplace		WP_ROCKET_LAUNCHER
+	WeaponBasedOff		WP_ROCKET_LAUNCHER
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	MuzzleEffect		"gfx/effects/forceflare"
+	MissileEffect		"Force/inv_wave"
+	altMuzzleEffect		"gfx/effects/forceflare"
+	altMissileEffect	"Force/inv_wave"
+	hasAnimOverrides 	1
+	animReady 			BOTH_MELEEPOSE //upper
+	animReadyWalk 		BOTH_MELEEPOSE 
+	animReadyNoAmmo 	BOTH_MELEEPOSE
+	animAttack 			BOTH_SUPERPUSH
+	animAttackWalk 		BOTH_SUPERPUSH
+	animStand 			BOTH_MELEEPOSE //lower
+	Icon				"gfx/hud/w_icon_merrsonn"
+	WeaponName			"Force Blast"
+	clipSize 			1
+	CustomAmmo 			24
+	velocityMod 0.2
+}
+WeaponInfo2
+{
+	WeaponToReplace		WP_MANDO_PISTOL		 
+	WeaponBasedOff		WP_MANDO_PISTOL					 
+	NewWorldModel 		"models/weapons2/saber_lightning/saber_lightning.glm"
+	NewViewModel 		"models/weapons2/dummy/dummy.md3"
+	Icon				"models/weapons2/halo_melee/icon"		 
+	WeaponName			"Lightning Bolts"    				 
+	MuzzleEffect    	"gfx/effects/forceflare
+	Missile3Effect		"force/lightning_arc"
+   	MissileHitHumanEffect	"SBD/Cortosis_blue"
+	MissileHitDroidEffect	"SBD/Cortosis_blue"
+	MissileMissEffect	"SBD/Cortosis_blue"
+	CustomAmmo 			542
+	ClipSize 			20
+	ReloadTimeModifier 	.85		 
+	FlashSound0			"sound/weapons/llc/fire.wav"
+	FlashSound1			"sound/weapons/llc/altfire.wav"
+	AltFireEnabled 		0
+	velocityMod 		0.3
+	rateMod 			2	
+	hasAnimOverrides	1
+	animReady 			BOTH_MELEEPOSE //upper
+    animReadyWalk 		BOTH_MELEEPOSE 
+    animReadyNoAmmo 	BOTH_MELEEPOSE
+	animRunAttackR		DUAL_PISTOLS_FIRE_RIGHT
+	animRunAttackL		DUAL_PISTOLS_FIRE_LEFT
+	animWalkAttackR		DUAL_PISTOLS_FIRE_RIGHT
+	animWalkAttackL		DUAL_PISTOLS_FIRE_LEFT
+    animStand 			BOTH_MELEEPOSE //lower
+}
+WeaponInfo3
+{
+	WeaponToReplace		WP_THROWER
+	WeaponBasedOff		WP_CLONE_RIFLE
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/noweap/noweap.md3"
+	Icon				"gfx/hud/w_icon_carboniterifle"
+	WeaponName			"Force Stasis"
+}
+
+description	"Jedi Forcemaster
+
+Class: Jedi
+Brief Overview:
+Light side masters who forego the use of a Lightsaber in favor of martial arts and Force proficiency."

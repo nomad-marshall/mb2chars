@@ -1,0 +1,248 @@
+//Siege class def file.
+class made by marshall
+
+ClassInfo
+{
+	name			"v5_DeathWatch"
+	weapons					WP_MELEE|WP_FIRE_NADE|WP_SABER
+	attributes				MB_ATT_JETPACK||MB_ATT_GUN_DEFENSE,3|MB_ATT_FP_SABER_DEFENSE,0|MB_ATT_WRISTLASER|MB_ATT_WOOKIEE_FURY,1|MB_ATT_ROCKET,1|MB_ATT_AMMO,3|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_FIRE_GRENADES,2|MB_ATT_DEXTERITY,3|MB_ATT_FUEL,3|MB_ATT_BESKAR,2|MB_ATT_TRACKING_BEACON
+	forcepowers   			FP_LEVITATION,0|FP_RAGE,3
+	maxhealth				100
+	maxarmor				80
+	saberstyle				SS_TAVION
+	saber1					energyshield
+	speed         			1.03
+	model					"deathwatch"
+	skin					"mauldalorian"
+	MBClass					MB_CLASS_MANDALORIAN
+	modelscale      		1.04
+	classNumberLimit		2
+	uishader 				"models/players/deathwatch/mb2_icon_mauldalorian"
+
+	resource 				RESOURCE_RAGE 
+	forcepool				150
+	resourceRegenCap 		50
+    resourceRegenAmount 	2.5
+    resourceRegenRate 		750
+	saberMaxChain 			1
+	saberDamage				50
+	APmultiplier 			0.3
+	BPmultiplier 			0.3
+	ASmultiplier 			1.3
+
+	WP_EE3Flags 			HELD_ALTRELOAD
+	WP_MandoPistolFlags 	HELD_ALTRELOAD
+	WP_A280Flags			HELD_ALTRELOAD
+	WP_MinigunFlags			HELD_EXPLOSIVE|HELD_FLAME|HELD_SLOW|HELD_DISRUPTIFY|HELD_ALTRELOAD|HELD_KNOCKBACK
+	WP_EE3Flags				HELD_AMMOREGEN
+	special1 EAS_HI_ROCKET
+	special2 
+	special3 EAS_HI_DEX
+	special4 EAS_FP_RAGE
+
+
+	uioverlay "gfx/icons/aerial"
+	
+	//WalkBackward 	BOTH_WALK_DUAL
+	//WalkForward 	BOTH_WALK_DUAL
+	isCustomBuild	1
+	mbPoints		6
+
+	c_att_skill_0	MB_ATT_INVALID
+	c_att_names_0	"^2Weaponry"
+	c_att_ranks_0	-1
+
+	c_att_skill_1	MB_ATT_A280
+	c_att_names_1	"Battle Rifle(A280):"
+	c_att_ranks_1	2,1,0
+	
+	c_att_skill_2	MB_ATT_MANDO_PISTOL
+	c_att_names_2	"DX13 Pistols(Dual Westars):"
+	c_att_ranks_2	1,0,2
+	
+	c_att_skill_3	MB_ATT_FLAMETHROWER
+	c_att_names_3	"Wrist Flamethrower:"
+	c_att_ranks_3	1
+	
+	c_att_skill_4	MB_ATT_EE3
+	c_att_names_4	"Burst Carbine(EE3):"
+	c_att_ranks_4	2,0,1
+
+	c_att_skill_5	MB_ATT_MINIGUN
+	c_att_names_5	"Siege Cannon(Minigun)"
+	c_att_ranks_5	5
+
+	c_att_skill_6 	MB_ATT_RESPAWNS
+	c_att_names_6	"Reinforcements:"
+	c_att_ranks_6 	2
+}
+
+WeaponInfo0
+{
+	WeaponToReplace		WP_A280
+	WeaponBasedOff		WP_EE3
+	NewWorldModel		"models/weapons2/kotor_drifle/kotor_drifle_w.glm"
+	NewViewModel		"models/weapons2/kotor_drifle/kotor_drifle.md3"
+	Icon				"gfx/hud/w_icon_kotor_drifle"
+	WeaponName			"Concordian Battle Rifle"
+	MuzzleEffect		"Blaster/MuzzleFlash01R"
+	AltMuzzleEffect		"Blaster/MuzzleFlash01R"
+	MissileEffect		"blaster/Shot10R"
+	AltMissileEffect 	"blaster/Shot03R"
+	FlashSound0 		"sound/weapons/EL-16/fire.wav"
+	FlashSound1 		"sound/weapons/EL-16/fire.wav"
+	FlashSound2 		"sound/weapons/EL-16/fire.wav"
+	FlashSound3 		"sound/weapons/EL-16/fire.wav"
+	FlashSound4  		"sound/weapons/EL-16/alt_fire.wav"	
+	AltFlashSound0  	"sound/weapons/EL-16/alt_fire.wav"
+	AltFlashSound1  	"sound/weapons/EL-16/alt_fire.wav"
+	AltFlashSound2  	"sound/weapons/EL-16/alt_fire.wav"
+	AltFlashSound3  	"sound/weapons/EL-16/alt_fire.wav"
+	AltFlashSound4  	"sound/weapons/EL-16/alt_fire.wav"
+	customammo 			800
+	clipsize 			40
+	FPMult				1.2
+	ReloadTimeModifier 	1.5
+	rateMod 			1.25
+	velocityMod 		1.25
+}
+WeaponInfo1
+{
+    WeaponToReplace		WP_MANDO_PISTOL   			
+    WeaponBasedOff		WP_BLASTER_PISTOL    			
+	NewWorldModel		"models/weapons2/dx13_pistol/model_w.glm"
+	CorrectedWorldModel	"models/weapons2/dx13_pistol/model_w.glm"
+	NewViewModel		"models/weapons2/dx13_pistol/model.md3"
+	Icon				"gfx/hud/w_icon_dx_13_dual"
+    WeaponName			"DX13 Korda-6-Shooters"   
+	MuzzleEffect		"Blaster/MuzzleFlash02Y"
+	AltMuzzleEffect		"Blaster/MuzzleFlash02Y"
+	MissileEffect		"Blaster/Shot02Y"
+	Missile3Effect		"Blaster/Shot03Y"
+	PowerupShotEffect	"Blaster/Shot04Y"
+	AltMissileEffect	"Blaster/Shot04Y"
+	FlashSound0			"sound/weapons/LPA_NN-14/fire.wav"
+	FlashSound1			"sound/chars/cadbane/misc/cadblast"	
+	altFlashSound0		"sound/weapons/LPA_NN-14/alt_fire.wav"	
+	AltFlashSound1		"sound/chars/cadbane/misc/cadblast"
+	ChargeSound			"sound/weapons/leia_pistol/altcharge.mp3"
+	ChargeEffect		"gfx/effects/yellow_bryarFrontFlash" 
+	hasAnimOverrides 	1
+	animReady 			BOTH_PAIN16   
+	animReadyWalk 		BOTH_PAIN16    
+	animReadyNoAmmo 	DUAL_DRAW 
+	animRunAttackR		DUAL_PISTOLS_FIRE_RIGHT
+	animRunAttackL		DUAL_PISTOLS_FIRE_LEFT
+	animWalkAttackR		DUAL_RUNNING_FIRE_RIGHT
+	animWalkAttackL		DUAL_RUNNING_FIRE_LEFT
+	typeCharge 			DUAL_PISTOLS_READY
+	animCharge			DUAL_PISTOLS_READY
+	animStand 			BOTH_STAND9
+	customAmmo 			600
+	clipsize			24
+	ReloadTimeModifier 	1
+	rateMod 			0.80
+	FPMult 				1.15
+	velocityMod 		1.25
+	damageMod			0.90
+}
+WeaponInfo2 
+{
+    WeaponToReplace		 WP_EE3
+    WeaponBasedOff		 WP_CLONE_RIFLE
+    NewWorldModel		"models/weapons2/cp-50_repeater/cp-50_repeater_w.glm"  
+    NewViewModel		"models/weapons2/cp-50_repeater/cp-50_repeater.md3"
+    Icon				"gfx/hud/w_icon_cp-50_repeater"
+    WeaponName			"Sundari-Pattern Repeater"    
+	MuzzleEffect		"Blaster/MuzzleFlash01Y"
+	AltMuzzleEffect		"Blaster/MuzzleFlash01Y"
+	MissileEffect		"Blaster/Shot02Y"
+	Missile3Effect		"Blaster/Shot03Y"
+	PowerupShotEffect	"Blaster/Shot04Y"
+	AltMissileEffect	"Blaster/Shot04Y"
+	ChargeSound			"sound/weapons/leia_pistol/altcharge.mp3"
+	ChargeEffect		"gfx/effects/yellow_bryarFrontFlash" 
+	customAmmo 			600
+	clipsize			24
+	FPMult 				1.1
+	ReloadTimeModifier 	1.7
+	rateMod 			0.7
+	velocityMod 		1.2
+}
+WeaponInfo3
+{
+	WeaponToReplace		WP_SABER		
+	WeaponBasedOff		WP_SABER			
+	NewWorldModel		"models/weapons2/dummy/dummy.glm"  
+	NewViewModel		"models/weapons2/dummy/dummy.md3" 	  
+	Icon				"gfx/hud/w_icon_gunganshield"
+	WeaponName			"Personal Energy Shield" 
+}
+WeaponInfo4
+{
+	WeaponToReplace		WP_MINIGUN
+	WeaponBasedOff		WP_MINIGUN
+	NewWorldModel		"models/weapons2/z6_rotary/model.glm"
+	NewViewModel		"models/weapons2/z6_rotary/rotary_cannon.md3"
+	NewHandsModel		"models/weapons2/z6_rotary/rotary_cannon_hand.md3"
+	NewBarrelModel		"models/weapons2/z6_rotary/rotary_cannon_barrel.md3"
+	MuzzleEffect  		"Blaster/MuzzleFlash04R"
+	altMuzzleEffect  	"Blaster/MuzzleFlash04R"
+	MissileEffect 		"Blaster/Shot04R"
+	missileMissEffect 	"effects/Grenades/EXP_BaseThermal"
+	missileHitEffect 	"effects/Grenades/EXP_BaseThermal"
+	MissileHitHumanEffect	"effects/Grenades/EXP_BaseThermal"
+	MissileHitDroidEffect 	"effects/Grenades/EXP_BaseThermal"
+	FlashSound0			"sound/weapons/MWC-35c/fire.wav"
+	FlashSound1			"sound/weapons/MWC-35c/alt_fire.wav"
+	isMinigun			1
+	Icon				"gfx/hud/w_icon_rotary_cannon"
+	WeaponName			"Vornax Rotary Siege Cannon"
+	FPMult				1.5
+	rateMod				8
+	damageMod			2
+	velocityMod			0.5
+	ReloadTimeModifier	3
+	clipsize			8
+	customAmmo			300
+}
+
+description	"Deathwatch Mauldalorian
+
+Class: Mandalorian
+Brief Overview: 
+A Deathwatch enforcer built to hold chokepoints with brutal burst fire & area control.
+
+^2Weaponry:
+- Energy Shield
+- DX13 Korda-6-Shooters
+-- Based on Mando Westar
+-- 10% less HP damage, 10% more FP damage, 20% faster ROF & velocity
+-- Rapid fire 12 shot pistol
+- Battle Rifle
+-- Based on A280
+-- 20% more FP damage, 50% slower reload, 20% slower ROF, +20% velocity
+-- Clip size allows 20 primary shots, 2 bursts
+- Sundari-Pattern Repeater
+-- Based on EE3
+-- 30% faster ROF, 70% slower reload, 10% more FP damage, +20% velocity
+-- Clip size allows 3 rapid bursts
+- Vornax Rotary Siege Cannon
+-- Based on Minigun
+-- Double damage, slow projectiles, long reload, 8 shot clip size
+-- Explosive AOE damage, ignites on direct hit
+- 2 Fire Grenades
+
+^8Attributes:
+- Fury (1)
+- Strength (1)
+- Dex (3)
+- Beskar (2)
+- Blaster Defence (3)
+
+^3Abilities:
+- Jetpack
+- Rocket ^3[CS1]
+- Wrist laser ^3[CS2]
+- Dex Roll ^3[CS3]
+- Rage ^3[CS4]"

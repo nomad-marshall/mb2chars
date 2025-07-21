@@ -1,0 +1,225 @@
+//Legends Mode character file - Created by Frenzy & Leos
+
+ClassInfo
+{
+	name			"v10_SForce"
+	weapons			WP_MELEE|WP_SABER|WP_PLX1
+	forcepowers		FP_LEVITATION,3|FP_SEE,3
+	attributes		MB_ATT_FORCEFOCUS,3|MB_ATT_FORCEBLOCK,3|MB_ATT_FP_REPULSE,1|MB_ATT_FLIPKICK,1|MB_ATT_SPY_DISGUISE,2|MB_ATT_FP_SABER_DEFENSE,0|MB_ATT_DEXTERITY,3|MB_ATT_DASH,1|MB_ATT_PLX1,1
+	forcepool	120
+	forceregen	1.1
+	rankforcepool		140,150,160
+	maxhealth    140
+	Speed       	1
+	modelscale	1
+	MBClass			MB_CLASS_JEDI
+	classNumberLimit	2
+	classflags		CFL_ICETHROWER|CFL_SEEING_STEALTH|CFL_HEAVYMELEE|CFL_NOPICKUPS
+	forceBlocking   1
+	saber1   martialarts_v_legends
+	saber2	martialarts_v_legends
+	saberstyle		SS_DUAL
+	APmultiplier       0.8
+	BPmultiplier		1
+	saberStanceAnim	 BOTH_MELEEPOSE
+	gloatAnim BOTH_ATTACK10
+	flourishAnim BOTH_STAND5TOSIT3
+	model			"reborn_twin"
+	skin			"default"
+	uishader		"models/players/reborn_twin/mb2_icon_default"
+	model_1			"reborn_twin"
+	skin_1			"boss"
+	uishader_1		"models/players/reborn_twin/mb2_icon_boss"
+	model_2	        "reborn_concept"
+	skin_2			"force"
+	uishader_2		"models/players/reborn_concept/mb2_icon_force"
+	model_3			"reborn2"
+	skin_3			"default"
+	uishader_3		"models/players/reborn2/mb2_icon_default"
+	//respawncustomtime  30000
+	special1			EAS_FP_SENSE
+	special2	 		EAS_HI_DASH
+	special3			EAS_HI_DEX
+	special4			EAS_FP_REPULSE
+	isCustomBuild		1
+	mbPoints			15
+	hasCustomSpec 		3
+	isOnlyOneSpec		1
+	customSpecName_1 	"Grenadier"
+	customSpecIcon_1 	"gfx/2d/hud/hlp_destroy"
+	customSpecDesc_1 	"Force Grenadier"
+	customSpecName_2 	"AREA DENIAL"
+	customSpecIcon_2 	"gfx/2d/hud/tindicator"
+	customSpecDesc_2 	"AOE lockdown"
+	customSpecName_3 	"SUPPORT"
+	customSpecIcon_3 	"gfx/2d/hud/hlp_escort"
+	customSpecDesc_3 	"Team Support"
+	//grenadier build
+	c_att_skill_0		MB_ATT_RESPAWNS
+	c_att_names_0		"Reinforcement:"
+	c_att_ranks_0		4
+	c_att_skill_1		MB_ATT_POWER
+	c_att_names_1		"Force Pool:"
+	c_att_ranks_1		0,0,0
+	c_att_skill_2		MB_ATT_FP_SPEED
+	c_att_names_2		"Force Speed:"
+	c_att_ranks_2 		0,1,1
+	c_att_skill_3		MB_ATT_FP_PROTECT
+	c_att_names_3		"Force Protect:"
+	c_att_ranks_3		2,2
+	c_att_skill_4		MB_ATT_FP_DESTRUCTION
+	c_att_names_4		"Force Destruct:"
+	c_att_ranks_4 		2,0,0
+	c_att_skill_5		MB_ATT_FP_PUSH
+	c_att_names_5		"Force Push:"
+	c_att_ranks_5 		0,1,1
+	c_att_skill_6		MB_ATT_FP_DRAIN
+	c_att_names_6		"Force Drain:"
+	c_att_ranks_6 		0,1,1
+	c_att_skill_7		MB_ATT_FP_ABSORB
+	c_att_names_7		"Absorb:"
+	c_att_ranks_7 		4,0
+	c_att_skill_8		MB_ATT_FLIPKICK
+	c_att_names_8		"Flipkick"
+	c_att_ranks_8		0,4
+	c_att_skill_9		MB_ATT_FP_LIGHTNING
+	c_att_names_9		"Lightning"
+	c_att_ranks_9		"1,2,0"
+	c_att_skill_10		MB_ATT_ROCKET_LAUNCHER 
+	c_att_names_10		"Sith Magick Trap:"
+	c_att_ranks_10		1,1,2
+	c_att_skill_11		MB_ATT_CLONE_PISTOL 
+	c_att_names_11		"Lightning Charge:"
+	c_att_ranks_11		1,1,0
+	c_att_skill_12		MB_ATT_AP_MULTIPLIER
+	c_att_names_12		"Saber Attack Power (1.5,2,2.5):"
+	c_att_ranks_12		1,1,1
+	c_att_skill_13		MB_ATT_AS_MULTIPLIER
+	c_att_names_13		"Saber Attack Speed (1.1,1.3):"
+	c_att_ranks_13		1,1,1
+	c_att_skill_14		MB_ATT_BESKAR 
+	c_att_names_14		"Reinforced Robes (Beskar):"
+	c_att_ranks_14		0,0,0
+
+	//aoe build
+	c_att_skill_15		MB_ATT_RESPAWNS
+	c_att_names_15		"Respawns:"
+	c_att_ranks_15		2
+
+	//support build
+	c_att_skill_30		MB_ATT_RESPAWNS
+	c_att_names_30 		"Reinforcement:"
+	c_att_ranks_30 		5
+}
+WeaponInfo0
+{
+	WeaponToReplace		WP_SABER
+	WeaponBasedOff		WP_SABER
+	NewWorldModel		"models/weapons2/noweap/noweap.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	Icon				"models/weapons2/halo_melee/icon.png"
+	WeaponName			"Martial Arts"
+}
+WeaponInfo1
+{
+	WeaponToReplace		WP_ROCKET_LAUNCHER
+	WeaponBasedOff		WP_ROCKET_LAUNCHER
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	MuzzleEffect		"gfx/effects/forceflare"
+	MissileEffect		"Force/inv_wave"
+	altMuzzleEffect		"gfx/effects/forceflare"
+	altMissileEffect	"Force/inv_wave"
+	hasAnimOverrides 	1
+	animReady 			BOTH_MELEEPOSE //upper
+	animReadyWalk 		BOTH_MELEEPOSE 
+	animReadyNoAmmo 	BOTH_MELEEPOSE
+	animAttack 			BOTH_SUPERPUSH
+	animAttackWalk 		BOTH_SUPERPUSH
+	animStand 			BOTH_MELEEPOSE //lower
+	Icon				"gfx/hud/w_icon_merrsonn"
+	WeaponName			"Sith Magick Trap"
+	clipSize 			5
+	CustomAmmo 			25
+	velocityMod 		0.01
+	damageMod			2.5
+}
+WeaponInfo2
+{
+	WeaponToReplace			WP_CLONE_PISTOL		 
+	WeaponBasedOff			WP_CLONE_PISTOL					 
+	NewWorldModel 			"models/weapons2/saber_lightning/saber_lightning.glm"
+	NewViewModel 			"models/weapons2/dummy/dummy.md3"
+	Icon					"models/weapons2/halo_melee/icon"		 
+	WeaponName				"Lightning Bolts"    				 
+	MuzzleEffect    		"gfx/effects/energyball"
+	MissileEffect			"force/lightning_arc"
+   	MissileHitHumanEffect	"SBD/Cortosis_blue"
+	MissileHitDroidEffect	"SBD/Cortosis_blue"
+	MissileMissEffect		"SBD/Cortosis_blue"
+	CustomAmmo 				542
+	ClipSize 				20
+	ReloadTimeModifier 		.85		 
+	FlashSound0				"sound/weapons/llc/fire.wav"
+	FlashSound1				"sound/weapons/llc/altfire.wav"
+	altFlashSound0			"sound/weapons/llc/fire.wav"
+	AltFlashSound1			"sound/weapons/llc/altfire.wav"
+	primFireEnabled			0
+	AltFireEnabled 			1
+	velocityMod 			0.3
+	rateMod 				2	
+	damageMod				2.5
+	FPMult					2.5
+	hasAnimOverrides		1
+	animReady 				BOTH_MELEEPOSE //upper
+    animReadyWalk 			BOTH_MELEEPOSE 
+    animReadyNoAmmo 		BOTH_MELEEPOSE
+	animRunAttackR			DUAL_PISTOLS_FIRE_RIGHT
+	animRunAttackL			DUAL_PISTOLS_FIRE_LEFT
+	animWalkAttackR			DUAL_PISTOLS_FIRE_RIGHT
+	animWalkAttackL			DUAL_PISTOLS_FIRE_LEFT
+    animStand 				BOTH_MELEEPOSE //lower
+	typeCharge 				BOTH_REACHFORSABER1
+	animCharge 				BOTH_REACHFORSABER1
+	
+}
+WeaponInfo3
+{
+	WeaponToReplace		WP_THROWER
+	WeaponBasedOff		WP_CLONE_RIFLE
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/noweap/noweap.md3"
+	Icon				"gfx/hud/w_icon_carboniterifle"
+	WeaponName			"Force Stasis"
+}
+WeaponInfo4
+{
+	WeaponToReplace		WP_PLX1
+	WeaponBasedOff		WP_CLONE_RIFLE
+	Icon				"gfx/hud/w_icon_carboniterifle"
+	WeaponName			"Force Mines"
+	NewWorldModel		"models/weapons2/dummyblaster/model.glm"
+	NewViewModel		"models/weapons2/dummy/dummy.md3"
+	MuzzleEffect		"gfx/effects/forceflare"
+	MissileEffect		"Force/inv_wave"
+	altMuzzleEffect		"gfx/effects/forceflare"
+	altMissileEffect	"Force/inv_wave"
+	hasAnimOverrides 	1
+	animReady 			BOTH_MELEEPOSE //upper
+	animReadyWalk 		BOTH_MELEEPOSE 
+	animReadyNoAmmo 	BOTH_MELEEPOSE
+	animAttack 			BOTH_SUPERPUSH
+	animAttackWalk 		BOTH_SUPERPUSH
+	animStand 			BOTH_MELEEPOSE //lower
+	Icon				"gfx/hud/w_icon_merrsonn"
+	WeaponName			"Sith Magick Trap"
+	clipSize 			5
+	CustomAmmo 			250
+	velocityMod 		0.01
+	damageMod			2.5
+}
+description	"Sith Forcemaster
+
+Class: Sith
+Brief Overview: 
+Dark side masters who forego the use of a Lightsaber in favor of martial arts and Force proficiency."
