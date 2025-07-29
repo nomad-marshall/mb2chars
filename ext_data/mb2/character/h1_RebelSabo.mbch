@@ -5,12 +5,12 @@ ClassInfo
 	weapons			WP_MELEE|WP_BLASTER
 	forcepowers     FP_BLIND,3
 	saberstyle		SS_TAVION
-	attributes		MB_ATT_AMMO,3|MB_ATT_TRACKING_BEACON|MB_ATT_POISON_DART,3|MB_ATT_TRACKING_DART,3|MB_ATT_BLASTER,1|MB_ATT_DEXTERITY,1
+	attributes		MB_ATT_TRACKING_BEACON|MB_ATT_POISON_DART,3|MB_ATT_TRACKING_DART,3|MB_ATT_BLASTER,1|MB_ATT_DEXTERITY,1
 
 	maxhealth		90
 
-	MaxArmor		5
-	rankArmor		15,25,80
+	MaxArmor		10
+	rankArmor		25,50,80
 
 	resource		RESOURCE_STAMINA
 	forceregen		0.7
@@ -70,7 +70,7 @@ ClassInfo
 
 
 	isCustomBuild	1
-	mbPoints		40
+	mbPoints		50
 
 	c_att_skill_0	MB_ATT_INVALID
 	c_att_names_0	"^2Weaponry"
@@ -192,14 +192,14 @@ WeaponInfo3
 	WeaponName			"Requisitioned Repeater"    					
 	MuzzleEffect		"Blaster/MuzzleFlash01G"   						
 	MissileEffect		"Blaster/Shot02G"  							
-	customAmmo			120
+	customAmmo			180
 	clipSize			30
 	FlashSound0			"sound/weapons/kotor_carbine/fire.wav"
 	idleAnim  			TORSO_WEAPONREADY3
 	firingAnim  		BOTH_ATTACK3
 	ReloadTimeModifier  1.1
 	rateMod				0.7
-	damageMod			0.8
+	damageMod			0.85
 }
 WeaponInfo4
 {
@@ -242,8 +242,8 @@ An elite saboteur with access to damage over time weapons and quick getaway tool
 ^2Default Weaponry:
 - Requisitioned Repeater 
 -- Low clip size 
--- 10% less FP damage, 20% less damage, 30% faster ROF 
--- Based off E11 1
+-- 10% less FP damage, 15% less HP damage, 30% faster ROF 
+-- Based off E-11 Blaster 1
 
 ^6Default Inventory:
 -E-Web Turret
@@ -256,14 +256,14 @@ An elite saboteur with access to damage over time weapons and quick getaway tool
 
 ^3Abilities:
 -Force Blind
--Poison Darts on ^3[CS1]
--Tracking Darts on ^3[CS2]
--Dash on ^3[CS3]
--Grapplehook on ^3[CS4]
+-Poison Darts ^3[CS1]
+-Tracking Darts ^3[CS2]
+-Dash ^3[CS3]
+-Grapplehook ^3[CS4]
 
 ^9Point Buy Info:
 - Armor
--- 15,25,60
+-- 25,50,80
 -Disguise [In melee, swap saber styles]
 -Poison Rifle
 --Based on DLT20A
@@ -286,4 +286,3 @@ An elite saboteur with access to damage over time weapons and quick getaway tool
 
 -Flipkick
 --Level 1 grants knockback"
-
