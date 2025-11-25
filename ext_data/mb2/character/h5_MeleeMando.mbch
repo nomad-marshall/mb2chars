@@ -2,11 +2,11 @@
 
 ClassInfo
 {
-	name					"meleemando"
+	name					"h5_MeleeMando"
 	weapons					WP_MELEE|WP_AMBAN
-	attributes				MB_ATT_FLIPKICK,1||MB_ATT_AMBAN,3|MB_ATT_BLAST_ARMOUR|MB_ATT_FUEL,3|MB_ATT_JETPACK|MB_ATT_ARMOUR,3|MB_ATT_WRISTLASER,1|MB_ATT_FLAMETHROWER|MB_ATT_ROCKET|MB_ATT_BESKAR,3|MB_ATT_WOOKIEE_FURY,3|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_DEXTERITY,3|
-	maxhealth				100
-	maxarmor				150
+	attributes				MB_ATT_FLIPKICK,1||MB_ATT_AMBAN,3|MB_ATT_BLAST_ARMOUR|MB_ATT_FUEL,3|MB_ATT_JETPACK|MB_ATT_WRISTLASER,1|MB_ATT_FLAMETHROWER|MB_ATT_ROCKET|MB_ATT_BESKAR,3|MB_ATT_WOOKIEE_FURY,3|MB_ATT_WOOKIE_STRENGTH,1|MB_ATT_DEXTERITY,3|
+	maxhealth				80
+	maxarmor				80
 	model					"mbmandy" 
 	skin					"mbrgb1"	
 	uishader				"models/players/mbmandy/mb2_icon_mbrgb1"
@@ -28,9 +28,8 @@ ClassInfo
     resourceRegenRate 		500
 
 	WP_MeleeFlags			HELD_DISRUPTIFY
-	holdables				HI_MEDPAC
-	rateOfFire_Melee 		0.7
-	damageGiven				1.2
+	rateOfFire_Melee 		0.8
+	damageGiven				1.1
 	special1 				EAS_HI_ROCKET
 	special2 				
 	special3 				EAS_HI_DASH
@@ -51,12 +50,6 @@ WeaponInfo0
 	primGore			1
 	altGore				1
 	CustomAmmo          0
-	hasAnimOverrides	1
-	animReady 			BOTH_PAIN16   
-	animReadyWalk 		BOTH_PAIN16   
-	animAttack 			BOTH_PUNCH4
-	animAttackWalk		BOTH_PUNCH4
-	animStand 			BOTH_STAND9
 }
 
 description	"^3Melee Mando
@@ -69,10 +62,10 @@ description	"^3Melee Mando
 ^3Attributes:
 ^3- Dexterity 3
 ^3- Flip Kick 1
-^3- 20% more damage given
+^3- 10% more damage given
 ^3- High damage resistance 
-^3- Blast armor, beskar 3
-^3- Strength 1, fury 3
+^3- Blast armor, Beskar 3
+^3- Strength 1, Fury 3
 
 ^3Inventory
 ^3- Jetpack 
@@ -82,3 +75,4 @@ description	"^3Melee Mando
 ^3honorbound to never use 
 ^3weapons (except the ones 
 ^3attached to his hands)."
+
